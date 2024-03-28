@@ -7,7 +7,7 @@ var AnalyticsSchema = new Schema({
     url: {type: String, required: [true, "can't be blank"] },
     headers: {type: Object, required: [true, "can't be blank"] },
     body: {type: Object, required: [true, "can't be blank"] },
-    socket: {type: Object, required: [true, "can't be blank"] },
+    address: {type: Object, required: [true, "can't be blank"] },
 }, {
     collection: 'analytics',
     timestamps: true
