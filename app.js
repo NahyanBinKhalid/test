@@ -47,6 +47,9 @@ const specs = swaggerJsdoc(options);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
+var cors = require('cors');
+app.use(cors());
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

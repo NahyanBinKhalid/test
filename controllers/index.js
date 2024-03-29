@@ -21,7 +21,7 @@ const register = async (req, res, next) => {
         
         const { _id, name, email, phone } = req.body;
         const password = await bcrypt.hash(req.body.password, 10);
-        var user = new userModel({ name, email, phone, password, avatar });
+        var user = new userModel({ name, email, phone, password });
 
         await user.save();
 
